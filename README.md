@@ -1,55 +1,52 @@
-# MCP_API_Client-Server-Telnet-Compatible
-MCP API Client Server (Telnet-Compatible)
+# 📡 **MCP API Client Server (Telnet-Compatible)**
 
-A CLI-based Postman/cURL clone built with Node.js.
-Supports:
+A **CLI-based Postman/cURL clone** built with Node.js.  
+Supports sending HTTP requests, managing sessions, and logging requests/responses in structured JSON format.
 
-Sending HTTP requests (GET, POST, PUT, DELETE)
+---
 
-Managing headers and cookies per session
+## 🚀 **Features**
+- ✅ Send HTTP requests (`GET`, `POST`, `PUT`, `DELETE`)  
+- ✅ Manage headers and cookies per session  
+- ✅ Structured logging of all requests & responses  
+- ✅ Simple CLI interface (via Telnet)  
 
-Logging requests & responses in structured JSON
+---
 
-Telnet-based interface
-
-🚀 Features
-
-✅ Command-line interaction (via Telnet)
-
-✅ Session-based header & cookie management
-
-✅ Structured logging of all requests & responses
-
-✅ Easy debugging & testing of APIs
-
-📂 File Structure
+## 📂 **Project Structure**
 mcp-api-client/
 │
-├── mcp-api-server.js   # Main server file
-├── package.json        # Node.js dependencies & settings
-└── README.md           # Documentation
+├── mcp-api-server.js # Main server file
+├── package.json # Node.js dependencies & settings
+└── README.md # Documentation
 
-⚙️ Installation
+yaml
+Copy code
 
-Clone or download this repository.
+---
 
+## ⚙️ **Installation**
+
+### 1️⃣ **Clone the Repository**
+```bash
 git clone https://github.com/your-username/mcp-api-client.git
 cd mcp-api-client
-
-
-Initialize Node.js project (if not already):
-
+2️⃣ Initialize Node.js Project
+bash
+Copy code
 npm init -y
-
-
-Install dependencies:
-
+3️⃣ Install Dependencies
+bash
+Copy code
 npm install axios tough-cookie axios-cookiejar-support
+4️⃣ Update package.json
+Make sure it has "type": "module" so ES Modules (import) work:
 
-
-Make sure your package.json has:
-
+json
+Copy code
 {
+  "name": "mcp-api-client",
+  "version": "1.0.0",
   "type": "module",
   "dependencies": {
     "axios": "^1.5.0",
@@ -57,69 +54,62 @@ Make sure your package.json has:
     "tough-cookie": "^4.1.3"
   }
 }
-
 ▶️ Running the Server
-
 Start the server:
 
+
 node mcp-api-server.js
+Expected output:
 
-
-You should see:
 
 🚀 MCP API Server running on port 6000
 👉 Connect with: telnet localhost 6000
+💻 Connect via Telnet
+Open another terminal and connect:
 
-💻 Connecting via Telnet
-
-Open another terminal and run:
 
 telnet localhost 6000
-
-
 You should see:
 
 ✅ API MCP Server ready. Type HELP.
 
-📜 Commands
+📜 Available Commands
 Command	Description
-HELP	Show available commands
+HELP	Show all available commands
 REQUEST <METHOD> <URL> [BODY]	Send an HTTP request (body must be JSON on one line)
-SETHEADER <key> <value>	Add custom header to the session
+SETHEADER <key> <value>	Add a custom header to the session
 CLEARHEADERS	Remove all custom headers
 SHOWSESSION	Display current session state (headers)
 EXIT	Close the connection
+
 🧪 Example Usage
 1. Show help
+
 HELP
-
 2. Set a header
+
 SETHEADER Authorization Bearer mytoken123
+3. Show session
 
-3. Check session headers
 SHOWSESSION
-
-
 Output:
+
 
 📦 Current Session:
 {
   "Authorization": "Bearer mytoken123"
 }
-
 4. Send a GET request
+
 REQUEST GET https://jsonplaceholder.typicode.com/posts/1
+Example response:
 
-
-Output:
 
 {
   "request": {
     "method": "GET",
     "url": "https://jsonplaceholder.typicode.com/posts/1",
-    "headers": {
-      "Authorization": "Bearer mytoken123"
-    },
+    "headers": {},
     "body": null
   },
   "response": {
@@ -133,20 +123,19 @@ Output:
     }
   }
 }
-
 5. Send a POST request
-REQUEST POST https://jsonplaceholder.typicode.com/posts {"title":"Hello","body":"World","userId":1}
 
+REQUEST POST https://jsonplaceholder.typicode.com/posts {"title":"Hello","body":"World","userId":1}
 6. Clear headers
 CLEARHEADERS
 SHOWSESSION
+7. Exit session
 
-7. Exit
 EXIT
-
 📌 Notes
+Bodies for POST/PUT must be valid JSON on a single line.
 
-Bodies for POST/PUT must be valid JSON and on a single line.
+Logs are stored in memory per Telnet session (session.logs).
 
-All logs are stored in memory per Telnet session (session.logs).
+
 
