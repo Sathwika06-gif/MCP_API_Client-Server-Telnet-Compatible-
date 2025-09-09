@@ -15,9 +15,13 @@ Supports sending HTTP requests, managing sessions, and logging requests/response
 
 ## 📂 **Project Structure**
 mcp-api-client/
-│
+
+|
+
 ├── mcp-api-server.js # Main server file
+
 ├── package.json # Node.js dependencies & settings
+
 └── README.md # Documentation
 
 
@@ -67,7 +71,7 @@ node mcp-api-server.js
 
 
     telnet localhost 6000
-    You should see:
+### You should see:
 
 ✅ API MCP Server ready. Type HELP.
 
