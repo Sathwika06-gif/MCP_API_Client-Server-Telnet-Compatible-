@@ -20,30 +20,26 @@ mcp-api-client/
 ├── package.json # Node.js dependencies & settings
 └── README.md # Documentation
 
-yaml
-Copy code
+
 
 ---
 
 ## ⚙️ **Installation**
 
 ### 1️⃣ **Clone the Repository**
-```bash
+
 git clone https://github.com/your-username/mcp-api-client.git
 cd mcp-api-client
-2️⃣ Initialize Node.js Project
-bash
-Copy code
+##2️⃣ Initialize Node.js Project
+
 npm init -y
-3️⃣ Install Dependencies
-bash
-Copy code
+##3️⃣ Install Dependencies
+
 npm install axios tough-cookie axios-cookiejar-support
-4️⃣ Update package.json
+##4️⃣ Update package.json
 Make sure it has "type": "module" so ES Modules (import) work:
 
-json
-Copy code
+
 {
   "name": "mcp-api-client",
   "version": "1.0.0",
@@ -54,18 +50,18 @@ Copy code
     "tough-cookie": "^4.1.3"
   }
 }
-▶️ Running the Server
+##▶️ Running the Server
 Start the server:
 
 
 node mcp-api-server.js
-Expected output:
+###Expected output:
 
 
 🚀 MCP API Server running on port 6000
 👉 Connect with: telnet localhost 6000
 💻 Connect via Telnet
-Open another terminal and connect:
+###Open another terminal and connect:
 
 
 telnet localhost 6000
@@ -83,23 +79,23 @@ SHOWSESSION	Display current session state (headers)
 EXIT	Close the connection
 
 🧪 Example Usage
-1. Show help
+###1. Show help
 
 HELP
-2. Set a header
+###2. Set a header
 
 SETHEADER Authorization Bearer mytoken123
-3. Show session
+###3. Show session
 
 SHOWSESSION
-Output:
+###Output:
 
 
 📦 Current Session:
 {
   "Authorization": "Bearer mytoken123"
 }
-4. Send a GET request
+###4. Send a GET request
 
 REQUEST GET https://jsonplaceholder.typicode.com/posts/1
 Example response:
@@ -123,19 +119,15 @@ Example response:
     }
   }
 }
-5. Send a POST request
+###5. Send a POST request
 
 REQUEST POST https://jsonplaceholder.typicode.com/posts {"title":"Hello","body":"World","userId":1}
-6. Clear headers
+###6. Clear headers
 CLEARHEADERS
 SHOWSESSION
-7. Exit session
+###7. Exit session
 
 EXIT
-📌 Notes
-Bodies for POST/PUT must be valid JSON on a single line.
-
-Logs are stored in memory per Telnet session (session.logs).
 
 
 
