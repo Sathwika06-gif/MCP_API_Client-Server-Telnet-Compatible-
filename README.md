@@ -58,16 +58,16 @@ node mcp-api-server.js
 ### Expected output:
 
 
-🚀 MCP API Server running on port 6000
+    MCP API Server running on port 6000
 
-👉 Connect with: telnet localhost 6000
+    Connect with: telnet localhost 6000
 
-💻 Connect via Telnet
+    Connect via Telnet
 ### Open another terminal and connect:
 
 
-telnet localhost 6000
-You should see:
+    telnet localhost 6000
+    You should see:
 
 ✅ API MCP Server ready. Type HELP.
 
