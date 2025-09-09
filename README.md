@@ -18,11 +18,11 @@ mcp-api-client/
 
 |
 
-├── mcp-api-server.js # Main server file
+├── mcp-api-server.js               # Main server file
 
-├── package.json # Node.js dependencies & settings
+├── package.json                    # Node.js dependencies & settings
 
-└── README.md # Documentation
+└── README.md                       # Documentation
 
 
 
@@ -32,33 +32,33 @@ mcp-api-client/
 
 ## 1️⃣ **Clone the Repository**
 
-git clone https://github.com/your-username/mcp-api-client.git
-cd mcp-api-client
+    git clone https://github.com/your-username/mcp-api-client.git
+    cd mcp-api-client
 ## 2️⃣ Initialize Node.js Project
 
-npm init -y
+    npm init -y
 ## 3️⃣ Install Dependencies
 
-npm install axios tough-cookie axios-cookiejar-support
+    npm install axios tough-cookie axios-cookiejar-support
 ## 4️⃣ Update package.json
-Make sure it has "type": "module" so ES Modules (import) work:
+    Make sure it has "type": "module" so ES Modules (import) work:
 
 
-{
-  "name": "mcp-api-client",
-  "version": "1.0.0",
-  "type": "module",
-  "dependencies": {
-    "axios": "^1.5.0",
-    "axios-cookiejar-support": "^2.0.2",
-    "tough-cookie": "^4.1.3"
-  }
-}
+    {
+      "name": "mcp-api-client",
+      "version": "1.0.0",
+      "type": "module",
+      "dependencies": {
+        "axios": "^1.5.0",
+        "axios-cookiejar-support": "^2.0.2",
+        "tough-cookie": "^4.1.3"
+      }
+    }
 ## ▶️ Running the Server
 Start the server:
 
 
-node mcp-api-server.js
+    node mcp-api-server.js
 ### Expected output:
 
 
@@ -133,7 +133,7 @@ Example response:
             SHOWSESSION
 ### 7. Exit session
 
-EXIT
+            EXIT
 
 
 
