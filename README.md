@@ -55,13 +55,13 @@ Start the server:
 
 
 node mcp-api-server.js
-###Expected output:
+### Expected output:
 
 
 🚀 MCP API Server running on port 6000
 👉 Connect with: telnet localhost 6000
 💻 Connect via Telnet
-###Open another terminal and connect:
+### Open another terminal and connect:
 
 
 telnet localhost 6000
@@ -81,13 +81,13 @@ EXIT	Close the connection
 🧪 Example Usage
 ### 1. Show help
 
-HELP
+        HELP
 ### 2. Set a header
 
-SETHEADER Authorization Bearer mytoken123
+       SETHEADER Authorization Bearer mytoken123
 ### 3. Show session
 
-SHOWSESSION
+        SHOWSESSION
 ### Output:
 
 
@@ -97,7 +97,7 @@ SHOWSESSION
 }
 ### 4. Send a GET request
 
-REQUEST GET https://jsonplaceholder.typicode.com/posts/1
+          REQUEST GET https://jsonplaceholder.typicode.com/posts/1
 Example response:
 
 
@@ -121,10 +121,10 @@ Example response:
 }
 ### 5. Send a POST request
 
-REQUEST POST https://jsonplaceholder.typicode.com/posts {"title":"Hello","body":"World","userId":1}
+            REQUEST POST https://jsonplaceholder.typicode.com/posts {"title":"Hello","body":"World","userId":1}
 ### 6. Clear headers
-CLEARHEADERS
-SHOWSESSION
+            CLEARHEADERS
+            SHOWSESSION
 ### 7. Exit session
 
 EXIT
